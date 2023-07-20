@@ -1,0 +1,41 @@
+.homeHeader .active {
+    border-bottom: 5px solid yellow;
+}
+
+.homeHeader img{
+    width: 100px;
+}
+
+.homeHeader .navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+/* carSection */
+.carSection img {
+    vertical-align: middle;
+    border-style: none;
+    height: 400px;
+    object-fit: cover;
+    
+}
+
+/* stickyContent */
+
+.stickyContent {
+    background-image: url("/assets/images/lights.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    
+}
+.videoSection{
+    background-image: url("/assets/images/media.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.photoG img{
+    height: 200px;
+    object-fit: cover;
+}
