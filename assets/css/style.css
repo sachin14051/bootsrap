@@ -117,7 +117,7 @@ img {
     max-width: 210px;
 }
 
-section, footer {
+.contact-area, footer {
     background: #1A1E25;
     color: #868c96;
 }
