@@ -338,7 +338,7 @@ h6 {
 }
 .bx-prev {
 	left: -90px !important;
-	background: url(./assets/images/arrow-left.png) no-repeat !important;
+	background: url(arrow-left.png) no-repeat !important;
 	background-size: auto auto !important;
 	background-size: 100% 100% !important;
 }
