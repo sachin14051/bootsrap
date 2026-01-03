@@ -606,3 +606,14 @@ h3 {
 .feature{
 	background-color: #fdf3ec;
 }
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+
+.terms-section{
+	background-color: #fdf3ec;
+}
