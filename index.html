@@ -1,581 +1,980 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>RajGan</title>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1470405369142420"
-     crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-<link rel="stylesheet" href="./assets/css/animate.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RajGan Group - Premium Software & Web Engineering Company</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="RajGan Group is a top-tier software development company offering website development, mobile apps, custom CRM/ERP solutions, UI/UX design, and AWS cloud support for startups and enterprises.">
+  <meta name="keywords" content="Software Development Company, Website Development, Mobile App Development, Custom Software, Angular, React, Node.js, AWS, India">
+  <meta property="og:title" content="RajGan Group - Turn Your Idea Into Powerful Digital Products">
+  <meta property="og:description" content="We design and develop high-performance websites, mobile apps, and custom software that help businesses grow, automate, and scale.">
+  <meta property="og:type" content="website">
 
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareCompany",
+    "name": "RajGan Group",
+    "url": "https://rajgan.in",
+    "logo": "https://rajgan.in/assets/images/logo.png",
+    "description": "Enterprise software development company specializing in web applications, mobile apps, and custom cloud solutions.",
+    "telephone": "+91-9420041663",
+    "email": "support@rajgan.in",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container"> <a class="navbar-brand navbar-logo" href="#"> RajGan</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">About</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Features</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Team</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Testimonials</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">Faq</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">Contact</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="7">Terms</a> </li>
+
+  <!-- 3D WebGL Canvas Background -->
+  <canvas id="canvas-3d"></canvas>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Floating WhatsApp Conversion Widget -->
+  <a href="https://wa.me/919420041663?text=Hello%20RajGan%20Group!%20I%20want%20to%20discuss%20a%20quote%20inquiry." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar-custom">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <i class="fas fa-cube text-primary"></i> RajGan <span class="text-white fw-light">Technologies</span>
+        <span class="tech-badge">ENTERPRISE IT</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link-item active">Home</a></li>
+        <li><a href="about.html" class="nav-link-item">About Us</a></li>
+        <li><a href="services.html" class="nav-link-item">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link-item">Portfolio</a></li>
+        <li><a href="#pricing" class="nav-link-item">Packages</a></li>
+        <li><a href="contact.html" class="nav-link-item">Contact</a></li>
+      </ul>
+
+      <a href="#" class="btn-gold-glow trigger-consultation-modal">
+        <i class="fas fa-paper-plane"></i> Get Free Consultation
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <i class="fas fa-cube text-primary"></i> RajGan <span class="text-white fw-light">Tech</span>
+        </a>
+        <button class="mobile-drawer-close">&times;</button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-item active">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-item">About Us</a></li>
+        <li><a href="services.html" class="mobile-nav-item">Services</a></li>
+        <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+        <li><a href="#pricing" class="mobile-nav-item">Packages</a></li>
+        <li><a href="contact.html" class="mobile-nav-item">Contact Us</a></li>
       </ul>
     </div>
+    <div>
+      <a href="#" class="btn-gold-glow w-100 trigger-consultation-modal mt-4">
+        <i class="fas fa-paper-plane me-2"></i> Free Consultation
+      </a>
+    </div>
   </div>
-</nav>
-<!-- End Navbar --> 
-<!-------Banner Start------->
-<section class="banner" data-scroll-index='0'>
-  <div class="banner-overlay">
+
+  <!-- SECTION 1: HERO SECTION -->
+  <section id="hero" class="hero-section">
     <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-12">
-          <div class="banner-text">
-            <h2 class="white">Technology Expertise in our Web Design Company</h2>
-            <p class="banner-text white">RajGan is a leading Website Development Company in Mumbai wherever you can take on a fully functional, trendy website to boost your digital footprint. The website we develop can provide you with up to date information within the company..</p>
-        
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="badge-tech">
+            <span class="pulse-dot"></span> Next-Gen Software Engineering & Digital Transformation
+          </div>
+          <h1 class="hero-title">
+            Turn Your Idea Into <span class="text-gradient">Powerful Digital Products</span>
+          </h1>
+          <p class="hero-subtitle">
+            We design and develop high-performance websites, mobile apps and custom software that help businesses grow, automate and scale.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#contact" class="btn-primary-glow fs-6">
+              <i class="fas fa-rocket"></i> Start Your Project
+            </a>
+            <a href="#" class="btn-outline-glass fs-6 trigger-consultation-modal">
+              <i class="fas fa-comments"></i> Get Free Consultation
+            </a>
           </div>
         </div>
-        <div class="col-md-4 col-sm-12"> <img src="iphone-screen.png" class="img-fluid wow fadeInUp"/> </div>
-      </div>
-    </div>
-  </div>
-  <span class="svg-wave"> <img class="svg-hero" src="applight-wave.svg"> </span> </section>
 
-<!-------Banner End-------> 
-
-<!-------About End------->
-
-<section class="about section-padding prelative" data-scroll-index='1'>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="sectioner-header text-center">
-          <h3>About</h3>
-          <span class="line"></span>
-          <p>Professional web development and website design company in Mumbai, India with over 2+ years of experience in the digital industry. Apart from our role as a web development agency, we also offer 360 degree digital services to help you grow your business online. We are proud to have some of the best website developers and web designers in Mumbai, India.</p>
-        </div>
-        <div class="section-content text-center">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <i class="fa fa-life-ring" aria-hidden="true"></i>
-                <h5>STRATEGIC APPROACH
-                </h5>
-                <p>Set and achieve realistic objectives with our goal-oriented approach and expert guidance.
-
-                </p>
-              </div>
+        <div class="col-lg-5 mt-5 mt-lg-0">
+          <div class="hero-mockup-container">
+            <div class="mockup-header">
+              <div class="mockup-dot red"></div>
+              <div class="mockup-dot yellow"></div>
+              <div class="mockup-dot green"></div>
+              <span class="small text-secondary ms-2 font-monospace">rajgan-ecosystem.v2.aws</span>
             </div>
-            <div class="col-md-4">
-              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fa fa-mobile" aria-hidden="true"></i>
-                <h5>CORPORATE WEBSITE
-                </h5>
-                <p>Elevate your corporate identity with a professionally designed and functionally rich website.Our corporate website solutions seamlessly blend aesthetics and functionality, reflecting the essence of your brand.</p>
+            <div class="mockup-body">
+              <div class="mockup-card">
+                <i class="fas fa-globe text-primary fs-3 mb-2"></i>
+                <div class="fw-bold small text-white">Web Apps</div>
+                <div class="text-muted small">React / Angular</div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <i class="fa fa-bolt" aria-hidden="true"></i>
-                <h5>API Integration
-                </h5>
-                <p>We can integrate third-party integrations to maximize the value of your marketing solutions by getting more visibility from various other platforms like Facebook, Google, payment gateway, email and SMS gateways, etc.</p>
+              <div class="mockup-card">
+                <i class="fas fa-mobile-screen-button text-emerald fs-3 mb-2"></i>
+                <div class="fw-bold small text-white">Mobile Apps</div>
+                <div class="text-muted small">iOS & Android</div>
+              </div>
+              <div class="mockup-card">
+                <i class="fas fa-gears text-gold fs-3 mb-2"></i>
+                <div class="fw-bold small text-white">Custom ERP/CRM</div>
+                <div class="text-muted small">Node.js & MongoDB</div>
+              </div>
+              <div class="mockup-card">
+                <i class="fas fa-cloud text-info fs-3 mb-2"></i>
+                <div class="fw-bold small text-white">AWS Cloud</div>
+                <div class="text-muted small">99.99% Uptime</div>
               </div>
             </div>
           </div>
-          <a href="#" class="about-btn">About Us</a> </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-------About End-------> 
+  </section>
 
-<!-------Video Start------->
-<section class="video-section prelative text-center white">
-  <div class="section-padding video-overlay">
+  <!-- SECTION 2: TRUST SECTION & STATS -->
+  <section class="py-5">
     <div class="container">
-      <h3>Watch Now</h3>
-      <i class="fa fa-play" id="video-icon" aria-hidden="true"></i>
-      <div class="video-popup">
-        <div class="video-src">
-          <div class="iframe-src">
-            <!-- <iframe src="https://www.youtube.com/embed/Ku52zNnft8k?rel=0&amp;showinfo=0" allowfullscreen></iframe> -->
+      <div class="glass-card p-4">
+        <div class="row text-center g-4">
+          <div class="col-lg-3 col-6">
+            <div class="kpi-value text-gradient counter-val" data-target="50" data-suffix="+">0</div>
+            <div class="kpi-label">Successful Projects Delivered</div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="kpi-value text-gradient-gold counter-val" data-target="30" data-suffix="+">0</div>
+            <div class="kpi-label">Happy Global Clients</div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="kpi-value text-gradient-emerald counter-val" data-target="99" data-suffix="%">0%</div>
+            <div class="kpi-label">Client Satisfaction Rating</div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="kpi-value text-gradient counter-val" data-target="24" data-suffix="/7">0</div>
+            <div class="kpi-label">Dedicated Technical Support</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-------Video End-------> 
+  </section>
 
-<!-------Features Start------->
-<section class="feature section-padding" data-scroll-index='2'>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="sectioner-header text-center">
-          <h3>Features</h3>
-          <span class="line"></span>
-          <p>RajGan is a premier web design company in Mumbai committed to creating such web designs that attract its visitors and compel them to become your customers across the globe. With our aim of "Imagination meet Implementation," </p>
+  <!-- SECTION 3: SERVICES SECTION -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">End-to-End Capabilities</span>
+        <h2>Services We Provide</h2>
+        <p>Comprehensive digital transformation services tailored for startups, growth-stage SMBs, and large enterprises.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. Web Dev -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card h-100">
+            <div class="service-icon"><i class="fas fa-code"></i></div>
+            <h4>Website Development</h4>
+            <p class="small text-secondary mb-3">
+              High-converting business websites, modern e-commerce portals, landing pages, and responsive corporate web apps using React & Angular.
+            </p>
+            <a href="service-details.html#web" class="text-primary text-decoration-none fw-semibold small">
+              Learn More <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
         </div>
-        <div class="section-content text-center">
-          <div class="row">
-            <div class="col-md-4 col-sm-12">
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
-                <div class="media-body text-right media-right-margin">
-                  <h5>Website Development
-                  </h5>
-                  <p>RajGan is a leading Website Development Company in Mumbai wherever you can take on a fully functional, trendy website to boost your digital footprint. The website we develop can provide you with up to date information within the company.</p>
-                </div>
-                <div class="media-right icon-border"> <span class="fa fa-bolt" aria-hidden="true"></span> </div>
-              </div>
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
-                <div class="media-body text-right media-right-margin">
-                  <h5>Social Media Integration</h5>
-                  <p>Calling Button Integration - WhatsApp Integration - WhatsApp Integration</p>
-                </div>
-                <div class="media-right icon-border"> <span class="fa fa-battery-full" aria-hidden="true"></span> </div>
-              </div>
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
-                <div class="media-body text-right media-right-margin">
-                  <h5>MOBILE RESPONSIVE
-                  </h5>
-                  <p>Your website will adapt seamlessly to various devices, providing an optimal user experience.
 
-                  </p>
-                </div>
-                <div class="media-right icon-border"> <span class="fa fa-wifi" aria-hidden="true"></span> </div>
+        <!-- 2. Mobile App -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card h-100">
+            <div class="service-icon text-emerald" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3);"><i class="fas fa-mobile-alt"></i></div>
+            <h4>Mobile App Development</h4>
+            <p class="small text-secondary mb-3">
+              Native Android, iOS, and cross-platform mobile apps for business management, customer delivery, e-commerce, and real-time tracking.
+            </p>
+            <a href="service-details.html#mobile" class="text-emerald text-decoration-none fw-semibold small">
+              Learn More <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Custom Software -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card h-100">
+            <div class="service-icon text-gold" style="background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3);"><i class="fas fa-cubes"></i></div>
+            <h4>Custom Software Solutions</h4>
+            <p class="small text-secondary mb-3">
+              Tailored ERP, CRM, inventory dashboards, admin panels, and enterprise software that automate complex business workflows.
+            </p>
+            <a href="service-details.html#custom" class="text-gold text-decoration-none fw-semibold small">
+              Learn More <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. UI/UX Design -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card h-100">
+            <div class="service-icon text-info" style="background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.3);"><i class="fas fa-palette"></i></div>
+            <h4>UI/UX Design & Prototyping</h4>
+            <p class="small text-secondary mb-3">
+              Modern user-centered visual interfaces, interactive Figma wireframes, product design, and seamless user experience optimization.
+            </p>
+            <a href="service-details.html#uiux" class="text-info text-decoration-none fw-semibold small">
+              Learn More <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. API Development -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card h-100">
+            <div class="service-icon text-warning"><i class="fas fa-network-wired"></i></div>
+            <h4>API & Backend Integration</h4>
+            <p class="small text-secondary mb-3">
+              Scalable Node.js & REST APIs, secure payment gateway integrations, microservices, third-party messaging, and CRM synchronization.
+            </p>
+            <a href="service-details.html#custom" class="text-warning text-decoration-none fw-semibold small">
+              Learn More <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Cloud Solutions -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card h-100">
+            <div class="service-icon text-primary"><i class="fas fa-cloud-arrow-up"></i></div>
+            <h4>Cloud & AWS Solutions</h4>
+            <p class="small text-secondary mb-3">
+              AWS & Firebase architecture deployment, serverless pipelines, database optimization, zero-downtime migrations, and cloud security.
+            </p>
+            <a href="service-details.html#cloud" class="text-primary text-decoration-none fw-semibold small">
+              Learn More <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 7. Maintenance & Support -->
+        <div class="col-lg-4 col-md-6 offset-lg-4">
+          <div class="glass-card h-100 text-center">
+            <div class="service-icon mx-auto text-emerald"><i class="fas fa-headset"></i></div>
+            <h4>Maintenance & Support</h4>
+            <p class="small text-secondary mb-3">
+              24/7 proactive bug fixing, performance monitoring, security patch updates, and ongoing technical support for peace of mind.
+            </p>
+            <a href="services.html" class="text-emerald text-decoration-none fw-semibold small">
+              Learn More <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: WHY CHOOSE US -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Value Proposition</span>
+        <h2>Why Partner With RajGan Group?</h2>
+        <p>We combine deep technology expertise with business acumen to deliver measurable commercial results.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4 col-sm-6">
+          <div class="glass-card h-100 p-4">
+            <i class="fas fa-bullseye text-primary fs-2 mb-3"></i>
+            <h5>Business-Focused Solutions</h5>
+            <p class="small text-secondary">Every line of code is written to solve real operational bottlenecks and increase your bottom-line revenue.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="glass-card h-100 p-4">
+            <i class="fas fa-layer-group text-emerald fs-2 mb-3"></i>
+            <h5>Modern Technology Stack</h5>
+            <p class="small text-secondary">Built using cutting-edge frameworks (React, Angular, Node, AWS) for maximum speed and durability.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="glass-card h-100 p-4">
+            <i class="fas fa-mobile-screen text-gold fs-2 mb-3"></i>
+            <h5>Mobile-First Development</h5>
+            <p class="small text-secondary">Flawless responsive performance across mobile phones, tablets, and desktop workstations.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="glass-card h-100 p-4">
+            <i class="fas fa-shield-halved text-info fs-2 mb-3"></i>
+            <h5>Secure & Scalable Architecture</h5>
+            <p class="small text-secondary">Bank-grade data encryption, microservices, and load-balanced cloud infrastructure.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="glass-card h-100 p-4">
+            <i class="fas fa-hand-holding-dollar text-warning fs-2 mb-3"></i>
+            <h5>Transparent Pricing</h5>
+            <p class="small text-secondary">Clear upfront scope, zero hidden costs, flexible milestones, and custom cost estimates.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="glass-card h-100 p-4">
+            <i class="fas fa-clock text-primary fs-2 mb-3"></i>
+            <h5>On-Time Project Delivery</h5>
+            <p class="small text-secondary">Agile sprint cycles ensuring predictable milestone delivery without compromising quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: OUR DEVELOPMENT PROCESS -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Agile Execution Framework</span>
+        <h2>Our 6-Step Development Process</h2>
+        <p>A proven structured methodology that takes your digital product seamlessly from inception to market launch.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">01</div>
+          <h6 class="fw-bold mb-2">Discover</h6>
+          <p class="small text-secondary mb-0">Requirements gathering, project roadmap, and feasibility analysis.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">02</div>
+          <h6 class="fw-bold mb-2">Plan</h6>
+          <p class="small text-secondary mb-0">Architecture design, wireframes, tech stack selection & milestones.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">03</div>
+          <h6 class="fw-bold mb-2">Design</h6>
+          <p class="small text-secondary mb-0">UI/UX prototyping, brand styling & interactive user flows.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">04</div>
+          <h6 class="fw-bold mb-2">Develop</h6>
+          <p class="small text-secondary mb-0">Clean coding, frontend engineering & robust backend API integration.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">05</div>
+          <h6 class="fw-bold mb-2">Test</h6>
+          <p class="small text-secondary mb-0">Rigorous QA, security audits, stress testing & bug resolution.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">06</div>
+          <h6 class="fw-bold mb-2">Launch & Support</h6>
+          <p class="small text-secondary mb-0">Production deployment, cloud setup & 24/7 post-launch maintenance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: INDUSTRIES WE SERVE -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Domain Expertise</span>
+        <h2>Industries We Serve</h2>
+        <p>Tailored technology solutions designed for specialized industry workflows and compliance requirements.</p>
+      </div>
+
+      <div class="text-center d-flex flex-wrap justify-content-center">
+        <span class="industry-chip"><i class="fas fa-store text-primary"></i> Retail</span>
+        <span class="industry-chip"><i class="fas fa-cart-shopping text-emerald"></i> E-commerce</span>
+        <span class="industry-chip"><i class="fas fa-heart-pulse text-danger"></i> Healthcare</span>
+        <span class="industry-chip"><i class="fas fa-graduation-cap text-gold"></i> Education</span>
+        <span class="industry-chip"><i class="fas fa-truck-fast text-info"></i> Logistics</span>
+        <span class="industry-chip"><i class="fas fa-building text-warning"></i> Real Estate</span>
+        <span class="industry-chip"><i class="fas fa-utensils text-primary"></i> Restaurants</span>
+        <span class="industry-chip"><i class="fas fa-vault text-emerald"></i> Finance</span>
+        <span class="industry-chip"><i class="fas fa-rocket text-gold"></i> Startups</span>
+        <span class="industry-chip"><i class="fas fa-briefcase text-info"></i> SMBs & Enterprises</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: FEATURED PROJECTS / PORTFOLIO -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Success Stories</span>
+        <h2>Featured Projects & Case Studies</h2>
+        <p>Explore how our custom software solutions have transformed business performance for our clients.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card h-100">
+            <div class="bg-dark p-4 rounded-3 text-center mb-3 border border-secondary border-opacity-25">
+              <i class="fas fa-store fs-1 text-gold"></i>
+            </div>
+            <div class="badge bg-primary mb-2">E-commerce</div>
+            <h5>OmniMarket E-Commerce Platform</h5>
+            <p class="small text-secondary">High-scalability web and mobile shop with automated inventory & payment integration.</p>
+            <div class="d-flex gap-2 mb-3">
+              <span class="badge bg-dark border border-secondary">React</span>
+              <span class="badge bg-dark border border-secondary">Node.js</span>
+              <span class="badge bg-dark border border-secondary">AWS</span>
+            </div>
+            <div class="text-emerald small fw-bold mb-3"><i class="fas fa-chart-line me-1"></i> +140% Online Sales Growth</div>
+            <a href="portfolio.html" class="btn-outline-glass btn-sm w-100 justify-content-center">View Case Study</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card h-100">
+            <div class="bg-dark p-4 rounded-3 text-center mb-3 border border-secondary border-opacity-25">
+              <i class="fas fa-truck-ramp-box fs-1 text-emerald"></i>
+            </div>
+            <div class="badge bg-success mb-2">Logistics</div>
+            <h5>LogiTrack Fleet Management ERP</h5>
+            <p class="small text-secondary">Real-time GPS delivery tracking app and admin management console for 500+ vehicles.</p>
+            <div class="d-flex gap-2 mb-3">
+              <span class="badge bg-dark border border-secondary">Angular</span>
+              <span class="badge bg-dark border border-secondary">Express</span>
+              <span class="badge bg-dark border border-secondary">MongoDB</span>
+            </div>
+            <div class="text-emerald small fw-bold mb-3"><i class="fas fa-chart-line me-1"></i> -35% Operational Fleet Cost</div>
+            <a href="portfolio.html" class="btn-outline-glass btn-sm w-100 justify-content-center">View Case Study</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card h-100">
+            <div class="bg-dark p-4 rounded-3 text-center mb-3 border border-secondary border-opacity-25">
+              <i class="fas fa-notes-medical fs-1 text-info"></i>
+            </div>
+            <div class="badge bg-info text-dark mb-2">Healthcare</div>
+            <h5>CarePlus Telehealth Mobile App</h5>
+            <p class="small text-secondary">Cross-platform iOS & Android mobile application for doctor consultations and prescriptions.</p>
+            <div class="d-flex gap-2 mb-3">
+              <span class="badge bg-dark border border-secondary">TypeScript</span>
+              <span class="badge bg-dark border border-secondary">Firebase</span>
+              <span class="badge bg-dark border border-secondary">WebRTC</span>
+            </div>
+            <div class="text-emerald small fw-bold mb-3"><i class="fas fa-chart-line me-1"></i> 50,000+ Patient Downloads</div>
+            <a href="portfolio.html" class="btn-outline-glass btn-sm w-100 justify-content-center">View Case Study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: TECHNOLOGY SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Modern Engineering</span>
+        <h2>Technologies We Excel In</h2>
+        <p>We leverage battle-tested open-source frameworks and cloud technologies to build bulletproof applications.</p>
+      </div>
+
+      <div class="row g-3 text-center">
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="tech-card">
+            <div class="tech-icon text-danger"><i class="fab fa-angular"></i></div>
+            <div class="fw-bold">Angular</div>
+            <div class="small text-secondary">Enterprise Web Apps</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="tech-card">
+            <div class="tech-icon text-info"><i class="fab fa-react"></i></div>
+            <div class="fw-bold">React & Native</div>
+            <div class="small text-secondary">Modern UI & Mobile</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="tech-card">
+            <div class="tech-icon text-emerald"><i class="fab fa-node-js"></i></div>
+            <div class="fw-bold">Node.js & Express</div>
+            <div class="small text-secondary">Fast Backend APIs</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="tech-card">
+            <div class="tech-icon text-success"><i class="fas fa-database"></i></div>
+            <div class="fw-bold">MongoDB</div>
+            <div class="small text-secondary">Scalable NoSQL</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="tech-card">
+            <div class="tech-icon text-warning"><i class="fab fa-js"></i></div>
+            <div class="fw-bold">JavaScript & TS</div>
+            <div class="small text-secondary">Type-Safe Logic</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="tech-card">
+            <div class="tech-icon text-primary"><i class="fas fa-plug"></i></div>
+            <div class="fw-bold">REST & GraphQL</div>
+            <div class="small text-secondary">API Ecosystems</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="tech-card">
+            <div class="tech-icon text-warning"><i class="fab fa-aws"></i></div>
+            <div class="fw-bold">AWS Cloud</div>
+            <div class="small text-secondary">EC2, S3, Lambda</div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="tech-card">
+            <div class="tech-icon text-gold"><i class="fas fa-fire"></i></div>
+            <div class="fw-bold">Firebase</div>
+            <div class="small text-secondary">Real-Time Data</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: TESTIMONIALS -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Client Reviews</span>
+        <h2>What Our Partners Say</h2>
+        <p>Read how our dedicated engineering team helped business founders achieve their strategic goals.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="glass-card h-100 p-4">
+            <div class="text-warning mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="small text-secondary mb-4">
+              "RajGan Group delivered our complex e-commerce platform ahead of schedule. Their attention to mobile responsiveness and speed optimization was outstanding!"
+            </p>
+            <div class="d-flex align-items-center">
+              <div class="bg-primary rounded-circle text-white p-2 fw-bold me-3">SS</div>
+              <div>
+                <div class="fw-bold text-white">Subhash Sonwane</div>
+                <div class="small text-secondary">Stock Market Advisor</div>
               </div>
             </div>
-            <div class="col-md-4 d-none d-md-block d-lg-block">
-              <div class="feature-mobile"> <img src="iphone-screen-with-shadow.png" class="img-fluid wow fadeInUp"/> </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="glass-card h-100 p-4">
+            <div class="text-warning mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-            <div class="col-md-4 col-sm-12">
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
-                <div class="media-left icon-border media-right-margin"> <span class="fa fa-check-double" aria-hidden="true"></span> </div>
-                <div class="media-body text-left">
-                  <h5>WEB HOSTING
-                  </h5>
-                  <p>Enjoy a complete solution with web hosting services, ensuring your website's robust functionality.
-
-                  </p>
-                </div>
+            <p class="small text-secondary mb-4">
+              "Five stars all the way! The custom mobile app they engineered for LaundryKing automated our booking process completely. Outstanding technical partner."
+            </p>
+            <div class="d-flex align-items-center">
+              <div class="bg-emerald rounded-circle text-white p-2 fw-bold me-3">VR</div>
+              <div>
+                <div class="fw-bold text-white">Vikas Rathod</div>
+                <div class="small text-secondary">Founder, LaundryKing</div>
               </div>
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
-                <div class="media-left icon-border media-right-margin"> <span class="fa fa-dollar-sign" aria-hidden="true"></span> </div>
-                <div class="media-body text-left">
-                  <h5>Payment gateway integration
-                  </h5>
-                  <p>You can integrate a payment gateway into your websites to make online transactions convenient and flexible.
+            </div>
+          </div>
+        </div>
 
-                  </p>
-                </div>
-              </div>
-              <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
-                <div class="media-left icon-border media-right-margin"> <span class="fa fa-hdd" aria-hidden="true"></span> </div>
-                <div class="media-body text-left">
-                  <h5>Maintenance and support
-                  </h5>
-                  <p>We offer round the clock support for your website for a consistent and smooth customer experience.
-
-                  </p>
-                </div>
+        <div class="col-md-4">
+          <div class="glass-card h-100 p-4">
+            <div class="text-warning mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="small text-secondary mb-4">
+              "Working with Sangita Shelke and the RajGan engineering team was seamless. Transparent pricing, proactive updates, and solid post-launch AWS support."
+            </p>
+            <div class="d-flex align-items-center">
+              <div class="bg-gold rounded-circle text-dark p-2 fw-bold me-3">AM</div>
+              <div>
+                <div class="fw-bold text-white">Anil Mehta</div>
+                <div class="small text-secondary">CTO, FinEdge Solutions</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-------Features End-------> 
+  </section>
 
-<!-------Team Start------->
-<section class="team section-padding" data-scroll-index='3'>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="sectioner-header text-center">
-          <h3>Our Team</h3>
-          <span class="line"></span>
-          <p>2+ years of experience of all the developers.</p>
+  <!-- SECTION 10: PRICING / PACKAGES -->
+  <section id="pricing" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Flexible Investment</span>
+        <h2>Transparent Development Packages</h2>
+        <p>We offer tailored engagement models designed to fit startups, growing businesses, and large corporate enterprises.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- STARTER -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card package-card h-100">
+            <div class="text-primary fw-bold text-uppercase small mb-2">STARTER</div>
+            <h4>For Small Businesses</h4>
+            <p class="small text-secondary mb-4">Ideal for early-stage startups and small businesses needing a clean digital presence.</p>
+            <hr class="border-secondary opacity-25">
+            <ul class="list-unstyled small text-secondary mb-4">
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> Responsive Modern Website (up to 5 Pages)</li>
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> Mobile-First Responsive Design</li>
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> Contact Form & WhatsApp Integration</li>
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> Basic SEO Optimization</li>
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> 1 Month Free Maintenance</li>
+            </ul>
+            <a href="#" class="btn-outline-glass w-100 justify-content-center trigger-consultation-modal">Get Custom Quote</a>
+          </div>
         </div>
-        <div class="section-content text-center">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="team-detail wow bounce" data-wow-delay="0.2s"> <img src="sachin[1].png" class="img-fluid"/>
-                <h4>Sachin Shelke</h4>
-                <p>Founder, CEO</p>
+
+        <!-- BUSINESS -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card package-card featured glass-card-gold h-100">
+            <div class="package-ribbon">POPULAR</div>
+            <div class="text-gold fw-bold text-uppercase small mb-2">BUSINESS</div>
+            <h4>For Growing Businesses</h4>
+            <p class="small text-secondary mb-4">Comprehensive custom web applications, e-commerce, or mobile apps for scaling companies.</p>
+            <hr class="border-secondary opacity-25">
+            <ul class="list-unstyled small text-secondary mb-4">
+              <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> Full Custom Web App or Mobile App</li>
+              <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> Payment Gateway & API Integration</li>
+              <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> Custom Admin Dashboard / CMS</li>
+              <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> AWS Cloud Setup & Database Architecture</li>
+              <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> 3 Months Dedicated Support</li>
+            </ul>
+            <a href="#" class="btn-gold-glow w-100 justify-content-center trigger-consultation-modal">Get Custom Quote</a>
+          </div>
+        </div>
+
+        <!-- ENTERPRISE -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card package-card h-100">
+            <div class="text-emerald fw-bold text-uppercase small mb-2">ENTERPRISE</div>
+            <h4>Custom Requirements</h4>
+            <p class="small text-secondary mb-4">For large-scale ERP, CRM automation, microservices, and high-concurrency platforms.</p>
+            <hr class="border-secondary opacity-25">
+            <ul class="list-unstyled small text-secondary mb-4">
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> Full Enterprise ERP / CRM System</li>
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> Dedicated Agile Software Team</li>
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> Microservices & Scalable Cloud Clusters</li>
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> Security Audits & SLA Guarantee</li>
+              <li class="mb-2"><i class="fas fa-check text-emerald me-2"></i> 24/7 Priority Support & SLA</li>
+            </ul>
+            <a href="#" class="btn-outline-glass w-100 justify-content-center trigger-consultation-modal">Get Custom Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: FREE CONSULTATION CTA -->
+  <section class="py-5">
+    <div class="container">
+      <div class="glass-card glass-card-gold text-center p-4 p-md-5">
+        <h2 class="mb-3">Have an Idea? Let's Build It Together.</h2>
+        <p class="lead max-width-600 mx-auto text-secondary mb-4">
+          Tell us about your project requirements and receive a free technical consultation & custom quote within 24 hours.
+        </p>
+        <a href="#" class="btn-gold-glow fs-6 trigger-consultation-modal">
+          <i class="fas fa-comments me-2"></i> Talk to Our Experts
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12: CONTACT SECTION -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Start the Conversation</span>
+        <h2>Contact Us For a Free Quote</h2>
+        <p>Fill out the form below to share your project scope, budget range, and timeline.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="glass-card p-4">
+            <form id="homeContactForm" action="https://formsubmit.co/support@rajgan.in" method="POST">
+              <input type="hidden" name="_subject" value="New Quote Inquiry - RajGan Group Website">
+              <input type="hidden" name="_cc" value="sachin14051@gmail.com">
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-group mb-0">
+                    <label class="small text-secondary mb-1">Full Name *</label>
+                    <input type="text" name="full_name" class="form-control-custom" placeholder="John Doe" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-0">
+                    <label class="small text-secondary mb-1">Email Address *</label>
+                    <input type="email" name="email" class="form-control-custom" placeholder="john@company.com" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-0">
+                    <label class="small text-secondary mb-1">Mobile Number *</label>
+                    <input type="tel" name="phone_number" class="form-control-custom" placeholder="+91 98765 43210" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-0">
+                    <label class="small text-secondary mb-1">Company Name</label>
+                    <input type="text" name="company_name" class="form-control-custom" placeholder="Your Business Ltd">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-0">
+                    <label class="small text-secondary mb-1">Project Type *</label>
+                    <select name="project_type" class="form-control-custom" required>
+                      <option value="">Select Project Type</option>
+                      <option>Website Development</option>
+                      <option>Mobile App Development</option>
+                      <option>Custom Software (ERP/CRM)</option>
+                      <option>UI/UX Design</option>
+                      <option>Cloud & AWS Support</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-0">
+                    <label class="small text-secondary mb-1">Estimated Budget Range</label>
+                    <select name="budget_range" class="form-control-custom">
+                      <option>Under $1,000 / ₹50k</option>
+                      <option>$1,000 - $3,000 / ₹1L - ₹2.5L</option>
+                      <option>$3,000 - $10,000 / ₹2.5L - ₹8L</option>
+                      <option>$10,000+ / Enterprise</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group mb-0">
+                    <label class="small text-secondary mb-1">Project Description *</label>
+                    <textarea name="project_description" class="form-control-custom" rows="4" placeholder="Briefly describe your project features, target audience, and goals..." required></textarea>
+                  </div>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn-primary-glow w-100 justify-content-center">
+                    <i class="fas fa-paper-plane me-2"></i> Get Free Quote
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h4 class="mb-4"><i class="fas fa-head-side-virus text-primary me-2"></i> Direct Contact Info</h4>
+              
+              <div class="d-flex align-items-start mb-3">
+                <div class="fs-4 text-emerald me-3"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <div class="fw-bold">Support & Inquiry Email</div>
+                  <div class="small text-secondary"><a href="mailto:support@rajgan.in" class="text-emerald fw-bold text-decoration-none">support@rajgan.in</a></div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start mb-3">
+                <div class="fs-4 text-gold me-3"><i class="fas fa-phone"></i></div>
+                <div>
+                  <div class="fw-bold">Call / WhatsApp Hotline</div>
+                  <div class="small text-secondary"><a href="tel:+919420041663" class="text-secondary text-decoration-none">+91 9420041663</a></div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start mb-3">
+                <div class="fs-4 text-info me-3"><i class="fas fa-location-dot"></i></div>
+                <div>
+                  <div class="fw-bold">Office Location</div>
+                  <div class="small text-secondary">Mumbai, Maharashtra, India</div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start mb-3">
+                <div class="fs-4 text-primary me-3"><i class="fas fa-clock"></i></div>
+                <div>
+                  <div class="fw-bold">Business Hours</div>
+                  <div class="small text-secondary">Monday - Saturday: 9:00 AM - 6:00 PM IST</div>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="team-detail wow bounce" data-wow-delay="0.4s"> <img src="dhruv[1].png" class="img-fluid"/>
-                <h4>Dhruv Vats</h4>
-                <p>Managing Director</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-detail wow bounce" data-wow-delay="0.6s"> <img src="nilesh[1].png" class="img-fluid"/>
-                <h4>Nilesh Jadhav</h4>
-                <p>Managing Director</p>
-              </div>
+
+            <div class="p-3 bg-dark border border-secondary rounded-3 text-center mt-3">
+              <span class="small text-secondary"><i class="fas fa-lock me-1 text-gold"></i> Non-Disclosure Agreement (NDA) signed upon request to protect your trade secrets.</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-------Team End-------> 
-
-<!-------Testimonial Start------->
-<section class="testimonial section-padding" data-scroll-index='4'>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="sectioner-header text-center white">
-          <h3>Testimonials</h3>
-          <span class="line"></span>
-          <!-- <p class="white">Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.</p> -->
-        </div>
-    
-      <div class="section-content">
-        <div class="row">
-          <div class="offset-md-2 col-md-8 col-sm-12">
-            <div class="slider">
-              <div class="slider-item">
-                <div class="test-img"><img src="subhash[1].png" alt="Placeholder" width="157" height="157"></div>
-                <div class="test-text"><span class="title"><span>Subhash Sonwane</span> Stock Market Advisor</span> “I had an amazing experience with this company! The customer service was top-notch, and the product exceeded my expectations. I highly recommend them to anyone looking for quality products and excellent service.” .</div>
-              </div>
-               <div class="slider-item">
-                <div class="test-img"><img src="vikas[1].png" alt="Placeholder" width="157" height="157"></div>
-                <div class="test-text"><span class="title"><span>Vikas Rathod</span> Founder LaundryKing</span> Five stars all the way! The service, the product, and the overall experience were outstanding.</div>
-              </div>
-            <!--  <div class="slider-item">
-                <div class="test-img"><img src="./assets/images/user3.jpg" alt="Placeholder" width="157" height="157"></div>
-                <div class="test-text"><span class="title"><span>Gordon Shaw</span> Blogger</span> Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratvo lutpat. Ut wisi enim ad minim veniam, quis nostrud v</div>
-              </div> -->
-            </div>
+  <!-- SECTION 13: FOOTER -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="brand-logo fs-5 mb-3">
+            <i class="fas fa-cube text-primary"></i> RajGan Technologies
           </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-------Testimonial End-------> 
-
-<!-------FAQ Start------->
-<section class="faq section-padding prelative" data-scroll-index='5'>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="sectioner-header text-center">
-          <h3>Frequently Asked Questions</h3>
-          <span class="line"></span>
-          <p></p>
-        </div>
-        <div class="section-content">
-          <div class="row">
-            <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.2s">
-              <h4>How much does a website cost??</h4>
-              <p>The cost of a website depends on various factors such as the complexity of the design, number of pages, and additional features. We offer different packages to suit various needs and budgets.
-              </p>
-            </div>
-            <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.2s">
-              <h4>How long does it take to design and develop a website??</h4>
-              <p>The timeline for a website project varies based on its complexity. Typically, a basic website can take 4-6 weeks, while more complex projects can take 8-12 weeks or longer.
-              </p>
-            </div>
-            <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.4s">
-              <h4>Do you offer custom website design?</h4>
-              <p>Yes, we specialize in custom website design tailored to meet the specific needs and goals of your business.</p>
-            </div>
-            <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.4s">
-              <h4>Will my website be mobile-friendly?</h4>
-              <p>Absolutely. All our website designs are responsive and optimized for mobile devices to ensure a seamless user experience across all platforms.</p>
-            </div>
-            <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
-              <h4>Can you help with website maintenance and updates?</h4>
-              <p>Yes, we offer ongoing website maintenance and support services to keep your site up-to-date and functioning smoothly .</p>
-            </div>
-            <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
-              <h4>Can you redesign my existing website?</h4>
-              <p>Yes, we can revamp your existing website to give it a fresh, modern look and improve its functionality and performance.</p>
-            </div>
-            <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
-              <h4>Do you offer domain registration and hosting services?</h4>
-              <p>Yes, we can help with domain registration and provide reliable hosting services to ensure your website is always accessible.</p>
-            </div>
-            <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
-              <h4>How do I get started?</h4>
-              <p>Simply contact us through our website, and we’ll schedule a consultation to discuss your project in detail and provide a customized quote.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-------FAQ End-------> 
-
-<!-------Contact Start------->
-<section data-scroll-index="7" class="p-2">
-<div class="container text-center terms-section">
-         <div class="sectioner-header text-center">
-          <h3 class="pt-2">Terms & Conditions</h3>
-          <span class="line"></span>
-          <p></p>
+          <p class="small text-secondary">
+            RajGan Group is an enterprise software engineering company delivering mobile apps, web applications, custom CRM/ERP platforms, and cloud AWS solutions for global businesses.
+          </p>
         </div>
 
-
-    <h5>1. Acceptance of Terms</h5>
-    <p>
-      By using this website or our services, you accept these Terms & Conditions.
-      If you do not agree, please do not use our services.
-    </p>
-
-    <h5>2. Services</h5>
-    <p>We provide digital services including:</p>
-    <ul>
-      <li>Website design & development</li>
-      <li>Web hosting & maintenance</li>
-      <li>SEO & digital marketing</li>
-      <li>Payment gateway & API integration</li>
-      <li>Technical consultation</li>
-    </ul>
-
-    <h5>3. User Responsibilities</h5>
-    <ul>
-      <li>Provide correct and complete information</li>
-      <li>Use the website legally and ethically</li>
-      <li>Do not attempt unauthorized access or misuse</li>
-      <li>Do not copy website content without permission</li>
-    </ul>
-
-    <h5>4. Payments & Refunds</h5>
-    <ul>
-      <li>Payments must follow agreed quotation or invoice</li>
-      <li>Advance payments are non-refundable once work starts</li>
-      <li>Delayed payments may suspend services</li>
-    </ul>
-
-    <h5>5. Intellectual Property</h5>
-    <p>
-      All website content, designs, code, and branding belong to RajGan.
-      Unauthorized use is strictly prohibited.
-    </p>
-
-    <h5>6. Project Delivery & Revisions</h5>
-    <p>
-      Delivery timelines depend on client approvals and inputs.
-      Extra revisions or scope changes may be chargeable.
-    </p>
-
-    <h5>7. Limitation of Liability</h5>
-    <p>
-      RajGan is not liable for indirect damages, data loss,
-      or downtime caused by third-party services.
-    </p>
-
-    <h5>8. Third-Party Services</h5>
-    <p>
-      We may use third-party tools or links.
-      RajGan is not responsible for their content or policies.
-    </p>
-
-    <h5>9. Termination</h5>
-    <p>
-      Services may be suspended or terminated if terms are violated,
-      payments are pending, or misuse is detected.
-    </p>
-
-    <h5>10. Governing Law</h5>
-    <p>
-      These terms are governed by the laws of India.
-      Any disputes fall under Indian jurisdiction.
-    </p>
-    </div>
-</section>
-<section class="contact section-padding" data-scroll-index='6'>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="sectioner-header text-center">
-          <h3>Contact us</h3>
-          <span class="line"></span>
-          <p>.</p>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-white fw-bold mb-3">Services</h6>
+          <ul class="list-unstyled small text-secondary">
+            <li class="mb-2"><a href="service-details.html#web" class="text-secondary text-decoration-none">Website Development</a></li>
+            <li class="mb-2"><a href="service-details.html#mobile" class="text-secondary text-decoration-none">Mobile App Dev</a></li>
+            <li class="mb-2"><a href="service-details.html#custom" class="text-secondary text-decoration-none">Custom Software</a></li>
+            <li class="mb-2"><a href="service-details.html#uiux" class="text-secondary text-decoration-none">UI/UX Design</a></li>
+            <li class="mb-2"><a href="service-details.html#cloud" class="text-secondary text-decoration-none">Cloud & AWS</a></li>
+          </ul>
         </div>
-        <div class="section-content">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-8">
-              <form id="contact_form" action="">
-                <div class="row">
-                  <div class="col">
-                    <input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required>
-                  </div>
-                  <div class="col">
-                    <input type="email" id="email" class="form-input w-100" name="email" placeholder="Email" required>
-                  </div>
-                </div>
-                <input type="text" id="subject" class="form-input w-100" name="subject" placeholder="Subject">
-                <textarea class="form-input w-100" id="message" placeholder="Message" name="message"></textarea>
-                <button class="btn-grad w-100 text-uppercase" type="submit" name="button">submit</button>
-              </form>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-4">
-              <div class="contact-info white">
-                <div class="contact-item media"> <i class="fa fa-map-marker-alt media-left media-right-margin"></i>
-                  <div class="media-body">
-                    <p class="text-uppercase">Address</p>
-                    <p class="text-uppercase">Mumbai, India</p>
-                  </div>
-                </div>
-                <div class="contact-item media"> <i class="fa fa-mobile media-left media-right-margin"></i>
-                  <div class="media-body">
-                    <p class="text-uppercase">Phone</p>
-                    <p class="text-uppercase"><a class="text-white" href="tel:+91 9420041663">+91 9420041663</a> </p>
-                  </div>
-                </div>
-                <div class="contact-item media"> <i class="fa fa-envelope media-left media-right-margin"></i>
-                  <div class="media-body">
-                    <p class="text-uppercase">E-mail</p>
-                    <p class="text-uppercase"><a class="text-white" href="mailto:support@rajgan.in">support@rajgan.in</a> </p>
-                  </div>
-                </div>
-                <div class="contact-item media"> <i class="fa fa-clock media-left media-right-margin"></i>
-                  <div class="media-body">
-                    <p class="text-uppercase">Working Hours</p>
-                    <p class="text-uppercase">Mon-sun 9.00 AM to 5.00PM.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-------Contact End-------> 
-
-<!-------Download End------->
-<!-- <section class="download section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="sectioner-header text-center white">
-          <h3>Download Our App</h3>
-          <span class="line"></span>
-          <p class="white">Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.</p>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="text-white fw-bold mb-3">Technologies</h6>
+          <ul class="list-unstyled small text-secondary">
+            <li class="mb-2">Angular & React.js</li>
+            <li class="mb-2">Node.js & Express</li>
+            <li class="mb-2">MongoDB & MySQL</li>
+            <li class="mb-2">AWS Cloud & Firebase</li>
+            <li class="mb-2">TypeScript & REST APIs</li>
+          </ul>
         </div>
-      </div>
-      <div class="col-md-12">
-        <div class="section-content text-center">
-          <ul>
-            <li><a href="#"><img src="images/appstore.png" class="wow fadeInUp" data-wow-delay="0.4s"/></a></li>
-            <li><a href="#"><img src="images/playstore.png" class="wow fadeInUp" data-wow-delay="0.7s"/></a></li>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="text-white fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled small text-secondary">
+            <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none">About Leadership</a></li>
+            <li class="mb-2"><a href="portfolio.html" class="text-secondary text-decoration-none">Case Studies</a></li>
+            <li class="mb-2"><a href="privacy.html" class="text-secondary text-decoration-none">Privacy Policy</a></li>
+            <li class="mb-2"><a href="terms.html" class="text-secondary text-decoration-none">Terms & Conditions</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none">Contact Us</a></li>
           </ul>
         </div>
       </div>
-    </div>
-  </div>
-</section> -->
 
-<!-------Download End------->
+      <hr class="border-secondary opacity-25">
 
-<footer class="footer-copy">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <p>2024 &copy; RajGan. Website Designed </p>
+      <div class="row align-items-center small text-secondary">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          &copy; 2026 RajGan Group. All rights reserved. Built with precision & modern web technologies.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="privacy.html" class="text-secondary text-decoration-none me-3">Privacy</a>
+          <a href="terms.html" class="text-secondary text-decoration-none me-3">Terms</a>
+          <a href="contact.html" class="text-secondary text-decoration-none">Free Consultation</a>
+        </div>
       </div>
     </div>
+  </footer>
+
+  <!-- Modal for Consultation Request -->
+  <div id="consultationModal" class="modal-overlay">
+    <div class="modal-content-glass">
+      <button class="modal-close">&times;</button>
+      <div class="text-center mb-4">
+        <div class="fs-1 text-gold mb-2"><i class="fas fa-comments"></i></div>
+        <h3>Book Free Technical Consultation</h3>
+        <p class="small text-secondary">Schedule a 1-on-1 discovery call with our solutions architect.</p>
+      </div>
+
+      <form id="modalConsultationForm" action="https://formsubmit.co/support@rajgan.in" method="POST">
+        <input type="hidden" name="_subject" value="New Consultation Request - RajGan Group Website">
+        <input type="hidden" name="_cc" value="sachin14051@gmail.com">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-group">
+          <input type="text" name="full_name" class="form-control-custom" placeholder="Full Name *" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control-custom" placeholder="Work / Business Email *" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone_number" class="form-control-custom" placeholder="Phone Number *" required>
+        </div>
+        <div class="form-group">
+          <select name="interested_service" class="form-control-custom" required>
+            <option value="">Interested Service</option>
+            <option>Website Development</option>
+            <option>Mobile App Development</option>
+            <option>Custom ERP/CRM Software</option>
+            <option>UI/UX Design</option>
+            <option>Cloud Infrastructure</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-gold-glow w-100 justify-content-center mt-3">
+          <i class="fas fa-paper-plane me-2"></i> Confirm Free Consultation Call
+        </button>
+      </form>
+    </div>
   </div>
-</footer>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
-<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
-<!-- scrollIt js --> 
-<script src="./assets/js/scrollIt.min.js"></script> 
-<script src="./assets/js/wow.min.js"></script> 
-<script>
-	wow = new WOW();
-	wow.init();
-$(document).ready(function(e) {
-
-	$('#video-icon').on('click',function(e){
-	e.preventDefault();
-	$('.video-popup').css('display','flex');
-	$('.iframe-src').slideDown();
-	});
-	$('.video-popup').on('click',function(e){
-	var $target = e.target.nodeName;
-	var video_src = $(this).find('iframe').attr('src');
-	if($target != 'IFRAME'){
-	$('.video-popup').fadeOut();
-	$('.iframe-src').slideUp();
-	$('.video-popup iframe').attr('src'," ");
-	$('.video-popup iframe').attr('src',video_src);
-	}
-	});
-
-	$('.slider').bxSlider({
-	pager: false
-	});
-});
-    
-$(window).on("scroll",function () {
-
-	var bodyScroll = $(window).scrollTop(),
-	navbar = $(".navbar");
-	
-	if(bodyScroll > 50){
-	$('.navbar-logo img').attr('src','images/logo-black.png');
-	navbar.addClass("nav-scroll");
-
-}else{
-	$('.navbar-logo img').attr('src','images/logo.png');
-	navbar.removeClass("nav-scroll");
-}
-
-});
-$(window).on("load",function (){
-	var bodyScroll = $(window).scrollTop(),
-	navbar = $(".navbar");
-	
-	if(bodyScroll > 50){
-	$('.navbar-logo img').attr('src','images/logo-black.png');
-	navbar.addClass("nav-scroll");
-	}else{
-	$('.navbar-logo img').attr('src','images/logo-white.png');
-	navbar.removeClass("nav-scroll");
-	}
-
-	$.scrollIt({
-	
-	easing: 'swing',      // the easing function for animation
-	scrollTime: 900,       // how long (in ms) the animation takes
-	activeClass: 'active', // class given to the active nav element
-	onPageChange: null,    // function(pageIndex) that is called when page is changed
-	topOffset: -63
-	});
-});
-
-</script>
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./assets/js/app.js"></script>
 </body>
 </html>

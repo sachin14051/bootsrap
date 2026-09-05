@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Custom Web, Mobile & Software Development | RajGan Group</title>
+  
+  <meta name="description" content="Explore RajGan Group's software development services: Website Development, Mobile Apps, Custom ERP/CRM Software, UI/UX Design, REST APIs, and AWS Cloud Support.">
+  <meta property="og:title" content="Our Services - RajGan Group Enterprise Tech">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <canvas id="canvas-3d"></canvas>
+
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- WhatsApp Widget -->
+  <a href="https://wa.me/919420041663?text=Hello!%20I%20want%20to%20discuss%20software%20services." target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Navbar -->
+  <nav class="navbar-custom">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <i class="fas fa-cube text-primary"></i> RajGan <span class="text-white fw-light">Technologies</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link-item">Home</a></li>
+        <li><a href="about.html" class="nav-link-item">About Us</a></li>
+        <li><a href="services.html" class="nav-link-item active">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link-item">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link-item">Contact</a></li>
+      </ul>
+
+      <a href="#" class="btn-gold-glow trigger-consultation-modal">
+        <i class="fas fa-comments"></i> Get Quote
+      </a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <i class="fas fa-cube text-primary"></i> RajGan <span class="text-white fw-light">Tech</span>
+        </a>
+        <button class="mobile-drawer-close">&times;</button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-item">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-item">About Us</a></li>
+        <li><a href="services.html" class="mobile-nav-item active">Services</a></li>
+        <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+        <li><a href="contact.html" class="mobile-nav-item">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="#" class="btn-gold-glow w-100 trigger-consultation-modal mt-4">
+        <i class="fas fa-paper-plane me-2"></i> Free Consultation
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center">
+    <div class="container">
+      <div class="badge-tech justify-content-center mx-auto">
+        <i class="fas fa-layer-group me-1 text-emerald"></i> Full-Cycle Digital Engineering Services
+      </div>
+      <h1 class="hero-title mx-auto" style="max-width: 850px;">
+        High-Performance Software <span class="text-gradient">Engineered to Scale</span>
+      </h1>
+      <p class="hero-subtitle mx-auto">
+        From early-stage MVPs to complex enterprise ERP systems, we deliver custom web, mobile, and cloud software built for conversion and high availability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Services Detailed Grid -->
+  <section class="py-5">
+    <div class="container">
+      
+      <!-- Track 1: Web Dev -->
+      <div class="glass-card mb-5 p-4 p-md-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="badge bg-primary mb-2">SERVICE TRACK 01</div>
+            <h2>Website Development</h2>
+            <p class="text-secondary">
+              We design and build fast, responsive, and SEO-optimized web applications using Angular, React, Node.js, and modern cloud platforms.
+            </p>
+            <div class="row g-2 mb-3 small">
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Business Websites</div>
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> E-commerce Portals</div>
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Corporate Websites</div>
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Custom Web Apps</div>
+            </div>
+            <a href="service-details.html#web" class="btn-primary-glow btn-sm">Explore Web Services</a>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div class="bg-dark p-5 rounded-4 border border-secondary border-opacity-25 fs-1 text-primary">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 2: Mobile Dev -->
+      <div class="glass-card mb-5 p-4 p-md-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+            <div class="badge bg-success mb-2">SERVICE TRACK 02</div>
+            <h2>Mobile App Development</h2>
+            <p class="text-secondary">
+              High-performance iOS, Android, and cross-platform hybrid mobile applications tailored for customer booking, logistics tracking, and enterprise workforce management.
+            </p>
+            <div class="row g-2 mb-3 small">
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Android & iOS Apps</div>
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Cross-Platform Apps</div>
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Delivery & Booking Apps</div>
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Push Notification Engine</div>
+            </div>
+            <a href="service-details.html#mobile" class="btn-gold-glow btn-sm">Explore Mobile Apps</a>
+          </div>
+          <div class="col-lg-6 order-lg-1 text-center">
+            <div class="bg-dark p-5 rounded-4 border border-secondary border-opacity-25 fs-1 text-emerald">
+              <i class="fas fa-mobile-screen-button"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 3: Custom Software -->
+      <div class="glass-card mb-5 p-4 p-md-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="badge bg-warning text-dark mb-2">SERVICE TRACK 03</div>
+            <h2>Custom Software & ERP / CRM</h2>
+            <p class="text-secondary">
+              Automate complex business operations with custom CRM, ERP platforms, inventory dashboards, admin consoles, and secure RESTful APIs.
+            </p>
+            <div class="row g-2 mb-3 small">
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> CRM & Sales Pipelines</div>
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Enterprise ERP Systems</div>
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Admin Control Panels</div>
+              <div class="col-6"><i class="fas fa-check text-emerald me-2"></i> Workflow Automation</div>
+            </div>
+            <a href="service-details.html#custom" class="btn-primary-glow btn-sm">Explore Software Solutions</a>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div class="bg-dark p-5 rounded-4 border border-secondary border-opacity-25 fs-1 text-gold">
+              <i class="fas fa-cubes"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track 4: UI/UX & Cloud Support -->
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="glass-card h-100 p-4">
+            <div class="badge bg-info text-dark mb-2">UI/UX DESIGN</div>
+            <h4>UI/UX Design & Prototyping</h4>
+            <p class="small text-secondary mb-3">Modern user interface designs, mobile app wireframes, and design system creation in Figma.</p>
+            <a href="service-details.html#uiux" class="text-info text-decoration-none fw-bold small">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="glass-card h-100 p-4">
+            <div class="badge bg-secondary mb-2">CLOUD & MAINTENANCE</div>
+            <h4>AWS Cloud & Support</h4>
+            <p class="small text-secondary mb-3">AWS serverless deployment, database cluster tuning, 24/7 security patch updates, and bug fixes.</p>
+            <a href="service-details.html#cloud" class="text-primary text-decoration-none fw-bold small">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-5">
+    <div class="container text-center">
+      <div class="glass-card glass-card-gold p-4 p-md-5">
+        <h2>Ready to Launch Your Software Project?</h2>
+        <p class="text-secondary max-width-600 mx-auto mb-4">Get a custom quote and technical architecture proposal from our lead engineers within 24 hours.</p>
+        <a href="contact.html" class="btn-gold-glow fs-6">Contact Engineering Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container text-center text-md-start">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <div class="brand-logo fs-5 mb-2">
+            <i class="fas fa-cube text-primary"></i> RajGan Group
+          </div>
+          <p class="small text-secondary mb-0">&copy; 2026 RajGan Group. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="index.html" class="text-secondary small me-3 text-decoration-none">Home</a>
+          <a href="portfolio.html" class="text-secondary small me-3 text-decoration-none">Portfolio</a>
+          <a href="contact.html" class="text-secondary small text-decoration-none">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="consultationModal" class="modal-overlay">
+    <div class="modal-content-glass">
+      <button class="modal-close">&times;</button>
+      <div class="text-center mb-4">
+        <h3>Request Free Consultation</h3>
+      </div>
+      <form id="modalConsultationForm" action="https://formsubmit.co/support@rajgan.in" method="POST">
+        <input type="hidden" name="_subject" value="New Consultation Request - Services Page Modal">
+        <input type="hidden" name="_cc" value="sachin14051@gmail.com">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-group"><input type="text" name="full_name" class="form-control-custom" placeholder="Full Name *" required></div>
+        <div class="form-group"><input type="email" name="email" class="form-control-custom" placeholder="Work / Business Email *" required></div>
+        <div class="form-group"><input type="tel" name="phone_number" class="form-control-custom" placeholder="Phone Number *" required></div>
+        <div class="form-group">
+          <select name="interested_service" class="form-control-custom" required>
+            <option value="">Interested Service</option>
+            <option>Website Development</option>
+            <option>Mobile App Development</option>
+            <option>Custom ERP/CRM Software</option>
+            <option>UI/UX Design</option>
+            <option>Cloud Infrastructure</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-gold-glow w-100 justify-content-center mt-3">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

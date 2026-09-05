@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Deep-Dive & Technical Specs - RajGan Group</title>
+  
+  <meta name="description" content="In-depth technical deliverables, architecture specs, and feature breakdowns for Web Development, Mobile Apps, Custom ERP/CRM Software, UI/UX, and AWS Cloud Support.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <canvas id="canvas-3d"></canvas>
+
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- WhatsApp Widget -->
+  <a href="https://wa.me/919420041663?text=Hello!%20I%20have%20questions%20about%20your%20service%20details." target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Navbar -->
+  <nav class="navbar-custom">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <i class="fas fa-cube text-primary"></i> RajGan <span class="text-white fw-light">Technologies</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link-item">Home</a></li>
+        <li><a href="about.html" class="nav-link-item">About Us</a></li>
+        <li><a href="services.html" class="nav-link-item active">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link-item">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link-item">Contact</a></li>
+      </ul>
+
+      <a href="#" class="btn-gold-glow trigger-consultation-modal">
+        <i class="fas fa-comments"></i> Get Quote
+      </a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo">
+          <i class="fas fa-cube text-primary"></i> RajGan <span class="text-white fw-light">Tech</span>
+        </a>
+        <button class="mobile-drawer-close">&times;</button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-item">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-item">About Us</a></li>
+        <li><a href="services.html" class="mobile-nav-item active">Services</a></li>
+        <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+        <li><a href="contact.html" class="mobile-nav-item">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="#" class="btn-gold-glow w-100 trigger-consultation-modal mt-4">
+        <i class="fas fa-paper-plane me-2"></i> Free Consultation
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center pb-4">
+    <div class="container">
+      <div class="badge-tech justify-content-center mx-auto">
+        <i class="fas fa-microchip me-1 text-primary"></i> Detailed Technical Specifications
+      </div>
+      <h1 class="hero-title mx-auto" style="max-width: 850px;">
+        Interactive Service <span class="text-gradient">Deep-Dive</span>
+      </h1>
+      <p class="hero-subtitle mx-auto mb-4">
+        Select a service track below to explore technology stack details, deliverables, key features, and development timelines.
+      </p>
+
+      <!-- Tab Selectors -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+        <button class="service-tab-btn btn-primary-glow btn-sm active" data-tab="web">
+          <i class="fas fa-code me-1"></i> Web Development
+        </button>
+        <button class="service-tab-btn btn-outline-glass btn-sm" data-tab="mobile">
+          <i class="fas fa-mobile-alt me-1"></i> Mobile Apps
+        </button>
+        <button class="service-tab-btn btn-outline-glass btn-sm" data-tab="custom">
+          <i class="fas fa-cubes me-1"></i> Custom Software / ERP
+        </button>
+        <button class="service-tab-btn btn-outline-glass btn-sm" data-tab="uiux">
+          <i class="fas fa-palette me-1"></i> UI/UX Design
+        </button>
+        <button class="service-tab-btn btn-outline-glass btn-sm" data-tab="cloud">
+          <i class="fas fa-cloud me-1"></i> Cloud & AWS
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Tab Panes -->
+  <section class="py-4">
+    <div class="container">
+      
+      <!-- PANE 1: WEB DEV -->
+      <div id="web" class="service-tab-pane glass-card p-4 p-md-5 active">
+        <div class="row">
+          <div class="col-lg-7">
+            <span class="badge bg-primary mb-2">WEB ENGINEERING</span>
+            <h3>Website & Web Application Development</h3>
+            <p class="text-secondary mb-4">
+              We build fast, secure, and modern web applications using Angular, React, Node.js, and TypeScript. Our web solutions scale seamlessly from early startup landing pages to complex corporate portals.
+            </p>
+
+            <h5 class="text-white mb-3">Key Deliverables</h5>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <div class="p-3 bg-dark border border-secondary rounded-3">
+                  <div class="fw-bold text-white mb-1"><i class="fas fa-laptop me-2 text-primary"></i> Business & Corporate Sites</div>
+                  <div class="small text-secondary">Custom corporate branding, multi-page layout, and lead capture integration.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-dark border border-secondary rounded-3">
+                  <div class="fw-bold text-white mb-1"><i class="fas fa-cart-shopping me-2 text-emerald"></i> E-commerce Platforms</div>
+                  <div class="small text-secondary">Product catalogs, shopping cart, payment gateways (Razorpay/Stripe), and order tracking.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-dark border border-secondary rounded-3">
+                  <div class="fw-bold text-white mb-1"><i class="fas fa-bolt me-2 text-gold"></i> High-Converting Landing Pages</div>
+                  <div class="small text-secondary">Speed-optimized marketing funnels engineered for maximum conversion rate.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-dark border border-secondary rounded-3">
+                  <div class="fw-bold text-white mb-1"><i class="fas fa-layer-group me-2 text-info"></i> Single Page Applications (SPA)</div>
+                  <div class="small text-secondary">Dynamic Angular/React frontends with zero full-page reloads.</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn-primary-glow">Start Web Project</a>
+          </div>
+
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <div class="glass-card bg-dark p-4">
+              <h5 class="text-gold mb-3"><i class="fas fa-wrench me-2"></i> Web Tech Stack</h5>
+              <ul class="list-unstyled small text-secondary">
+                <li class="mb-2"><strong class="text-white">Frontend:</strong> Angular, React, TypeScript, HTML5/CSS3</li>
+                <li class="mb-2"><strong class="text-white">Backend:</strong> Node.js, Express.js, REST APIs</li>
+                <li class="mb-2"><strong class="text-white">Databases:</strong> MongoDB, PostgreSQL, MySQL</li>
+                <li class="mb-2"><strong class="text-white">Hosting:</strong> AWS S3/CloudFront, Vercel, Netlify</li>
+              </ul>
+              <hr class="border-secondary opacity-25">
+              <div class="small text-emerald fw-bold"><i class="fas fa-clock me-1"></i> Average Timeline: 2 - 6 Weeks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 2: MOBILE APPS -->
+      <div id="mobile" class="service-tab-pane glass-card p-4 p-md-5" style="display: none;">
+        <div class="row">
+          <div class="col-lg-7">
+            <span class="badge bg-success mb-2">MOBILE ENGINEERING</span>
+            <h3>Native & Cross-Platform Mobile Applications</h3>
+            <p class="text-secondary mb-4">
+              We design and develop high-performance mobile apps for iOS and Android. Whether you need a customer booking app, real-time delivery tracking, or an internal business tool, we deliver seamless native performance.
+            </p>
+
+            <h5 class="text-white mb-3">Key Deliverables</h5>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <div class="p-3 bg-dark border border-secondary rounded-3">
+                  <div class="fw-bold text-white mb-1"><i class="fab fa-android me-2 text-success"></i> Android & iOS Apps</div>
+                  <div class="small text-secondary">Native feel, smooth touch gestures, and App Store / Play Store compliance.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-dark border border-secondary rounded-3">
+                  <div class="fw-bold text-white mb-1"><i class="fas fa-location-arrow me-2 text-info"></i> GPS & Delivery Apps</div>
+                  <div class="small text-secondary">Real-time driver location tracking, route optimization, and live status updates.</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn-gold-glow">Start Mobile Project</a>
+          </div>
+
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <div class="glass-card bg-dark p-4">
+              <h5 class="text-emerald mb-3"><i class="fas fa-mobile me-2"></i> Mobile Tech Stack</h5>
+              <ul class="list-unstyled small text-secondary">
+                <li class="mb-2"><strong class="text-white">Frameworks:</strong> React Native, Flutter, Native Android/iOS</li>
+                <li class="mb-2"><strong class="text-white">Real-Time:</strong> Firebase Cloud Messaging, WebSockets</li>
+                <li class="mb-2"><strong class="text-white">APIs:</strong> Node.js REST / GraphQL endpoints</li>
+              </ul>
+              <hr class="border-secondary opacity-25">
+              <div class="small text-emerald fw-bold"><i class="fas fa-clock me-1"></i> Average Timeline: 4 - 10 Weeks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 3: CUSTOM SOFTWARE -->
+      <div id="custom" class="service-tab-pane glass-card p-4 p-md-5" style="display: none;">
+        <div class="row">
+          <div class="col-lg-7">
+            <span class="badge bg-warning text-dark mb-2">ENTERPRISE SOFTWARE</span>
+            <h3>Custom ERP, CRM & Business Management Software</h3>
+            <p class="text-secondary mb-4">
+              Eliminate manual operational chaos with custom-built software tailored specifically to your business workflows. We build CRM platforms, inventory control modules, admin dashboards, and automated API pipelines.
+            </p>
+            <a href="contact.html" class="btn-primary-glow">Discuss Enterprise Project</a>
+          </div>
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <div class="glass-card bg-dark p-4">
+              <h5 class="text-warning mb-3">Enterprise Tech Stack</h5>
+              <p class="small text-secondary">Node.js, Express, MongoDB, Angular Admin Dashboards, AWS EC2, Docker microservices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 4: UI/UX DESIGN -->
+      <div id="uiux" class="service-tab-pane glass-card p-4 p-md-5" style="display: none;">
+        <div class="row">
+          <div class="col-lg-7">
+            <span class="badge bg-info text-dark mb-2">PRODUCT DESIGN</span>
+            <h3>UI/UX Design & User Experience Optimization</h3>
+            <p class="text-secondary mb-4">
+              Crafting visually stunning, intuitive user interfaces in Figma. We create interactive prototypes, conduct user journey audits, and build scalable design systems.
+            </p>
+            <a href="contact.html" class="btn-gold-glow">Request UX Audit</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 5: CLOUD & AWS -->
+      <div id="cloud" class="service-tab-pane glass-card p-4 p-md-5" style="display: none;">
+        <div class="row">
+          <div class="col-lg-7">
+            <span class="badge bg-secondary mb-2">CLOUD INFRASTRUCTURE</span>
+            <h3>AWS Cloud Solutions, DevOps & Maintenance</h3>
+            <p class="text-secondary mb-4">
+              24/7 technical support, AWS cloud architecture, serverless pipelines, database optimization, SSL security compliance, and zero-downtime updates.
+            </p>
+            <a href="contact.html" class="btn-outline-glass">Get AWS Support</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section mt-5">
+    <div class="container text-center text-md-start">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <div class="brand-logo fs-5 mb-2">
+            <i class="fas fa-cube text-primary"></i> RajGan Group
+          </div>
+          <p class="small text-secondary mb-0">&copy; 2026 RajGan Group. Technical Service Specs.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="index.html" class="text-secondary small me-3 text-decoration-none">Home</a>
+          <a href="services.html" class="text-secondary small me-3 text-decoration-none">Services Hub</a>
+          <a href="contact.html" class="text-secondary small text-decoration-none">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="consultationModal" class="modal-overlay">
+    <div class="modal-content-glass">
+      <button class="modal-close">&times;</button>
+      <div class="text-center mb-4">
+        <h3>Request Free Consultation</h3>
+      </div>
+      <form id="modalConsultationForm" action="https://formsubmit.co/support@rajgan.in" method="POST">
+        <input type="hidden" name="_subject" value="New Consultation Request - Service Specs Page Modal">
+        <input type="hidden" name="_cc" value="sachin14051@gmail.com">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-group"><input type="text" name="full_name" class="form-control-custom" placeholder="Full Name *" required></div>
+        <div class="form-group"><input type="email" name="email" class="form-control-custom" placeholder="Work / Business Email *" required></div>
+        <div class="form-group"><input type="tel" name="phone_number" class="form-control-custom" placeholder="Phone Number *" required></div>
+        <div class="form-group">
+          <select name="interested_service" class="form-control-custom" required>
+            <option value="">Interested Service</option>
+            <option>Website Development</option>
+            <option>Mobile App Development</option>
+            <option>Custom ERP/CRM Software</option>
+            <option>UI/UX Design</option>
+            <option>Cloud Infrastructure</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-gold-glow w-100 justify-content-center mt-3">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
